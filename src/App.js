@@ -1,15 +1,20 @@
 import React from 'react';
 
-import Todo from './component/Todo';
+import UserNameInput from './components/UserNameInput';
+
+
+import './App.css'
+
 
 function App() {
   return (
     <div>
-      <h1>My Todos</h1>
-      <Todo text='Learn React' />
-      <Todo text='Learn React' />
-      <Todo text='Learn React' />
-      <Todo text='Learn React' />
+      <section id="goal-form">
+        <UserNameInput />
+      </section>
+      <section id="goals">
+
+      </section>
     </div>
   );
 }
