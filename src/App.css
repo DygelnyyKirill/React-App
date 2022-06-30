@@ -1,8 +1,9 @@
 #goals {
-    width: 35rem;
+    width: 40rem;
     max-width: 90%;
     margin: 3rem auto;
     background-color: white;
+    border-radius: 10px;
   }
   
 #goal-form {
