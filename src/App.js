@@ -1,38 +1,14 @@
 import React, { useState } from 'react';
-
-import UserNameInput from './components/UserNameInput';
-
-
-import './App.css'
-import UserNameList from './components/UserNameList';
-
+import AddUser from './components/Users/AddUser';
+import UserList from './components/Users/UserList';
 
 const App = () => {
-  const [userName, setUserName] = useState([
-    {user: 'Kirill Dugelniy', id: '1'},
-  ]);
-
-
-  let content = (
-    <p style={{ textAlign: 'center' }}>No User name found. Maybe add?</p>
-  );
-  
-  if (userName.length > 0) {
-    content = (
-      <UserNameList items={userName} />
-    );
-  };
-
   return (
     <div>
-      <section id="goal-form">
-        <UserNameInput />
-      </section>
-      <section id="goals">
-        {content}
-      </section>
+        <AddUser />
+        <UserList users={[]} />
     </div>
   );
-}
+};
 
 export default App;
