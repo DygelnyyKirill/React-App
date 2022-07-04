@@ -2,7 +2,6 @@ import React, { useState } from "react";
 import Card from "../UI/Card";
 import Button from "../UI/Button";
 import Wrapper from "../Helpers/Wrapper";
-import Backdrop from "../UI/Backdrop";
 import ErrorModal from "../UI/ErrorModal";
 
 import classes from "./AddUser.module.css";
@@ -42,17 +41,12 @@ const AddUser= (props) => {
         setEnteredAge(event.target.value);
     };
 
-    // const showModalHandler = () => {
-    //     setError(true);
-    // }
-
     const closeErrorHandler = () => {
         setError(null);
     }
     
     return (
         <Wrapper>
-            {error && <Backdrop onClose={closeErrorHandler} />}
             {error && <ErrorModal title={error.title} message={error.message} onClose={closeErrorHandler}/>}
             
             <Card className={classes.input}>
